@@ -29,14 +29,6 @@ LOCAL_MODULE:= libcurl
 
 LOCAL_SHARED_LIBRARIES := -lz
 
-# crypto
-include $(LOCAL_PATH)/android-crypto.mk
-LOCAL_SRC_FILES += $(addprefix ../../openssl-android/crypto/, $(LOCAL_CRYPTO_SRC_FILES))
-
-# ssl
-include $(LOCAL_PATH)/android-ssl.mk
-LOCAL_SRC_FILES += $(addprefix ../../openssl-android/ssl/, $(LOCAL_SSL_SRC_FILES))
-
 include $(BUILD_STATIC_LIBRARY)
 
 # test

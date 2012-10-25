@@ -1,7 +1,7 @@
 #!/bin/sh
 SDK_ROOT=/home/minggo/android-source
 export PATH=/home/minggo/android-source/prebuilt/linux-x86/toolchain/arm-eabi-4.4.3/bin:$PATH
-./configure --with-ssl --host=arm-linux CC=arm-eabi-gcc LD=arm-eabi-ld AR=arm-eabi-ar STRIP=arm-eabi-strip \
+./configure --host=arm-linux CC=arm-eabi-gcc LD=arm-eabi-ld AR=arm-eabi-ar STRIP=arm-eabi-strip \
 AS=arm-eabi-as \
 CPPFLAGS="-I $SDK_ROOT/external/libpng/include     
 -I $SDK_ROOT/external/zlib    
