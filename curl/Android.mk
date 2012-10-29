@@ -66,12 +66,10 @@ CURL_HEADERS := \
 
 LOCAL_SRC_FILES := $(addprefix lib/,$(CSOURCES))
 LOCAL_C_INCLUDES += $(LOCAL_PATH)/include/
-LOCAL_C_INCLUDES += $(LOCAL_PATH)/../openssl/include \
-../include
 LOCAL_CFLAGS += $(common_CFLAGS)
 
-#LOCAL_COPY_HEADERS_TO := libcurl/curl
-#LOCAL_COPY_HEADERS := $(addprefix include/curl/,$(CURL_HEADERS))
+LOCAL_COPY_HEADERS_TO := libcurl/curl
+LOCAL_COPY_HEADERS := $(addprefix include/curl/,$(CURL_HEADERS))
 
 LOCAL_MODULE:= libcurl
 LOCAL_MODULE_TAGS := optional
@@ -83,9 +81,6 @@ LOCAL_MODULE_TAGS := optional
 ALL_PREBUILT += $(LOCAL_PATH)/NOTICE
 $(LOCAL_PATH)/NOTICE: $(LOCAL_PATH)/COPYING | $(ACP)
 	$(copy-file-to-target)
-
-LOCAL_SHARED_LIBRARIES := -lz
-LOCAL_LDLIBS := -L$(LOCAL_PATH)/../precompiled -lssl
 
 include $(BUILD_STATIC_LIBRARY)
 

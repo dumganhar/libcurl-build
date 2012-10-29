@@ -4263,16 +4263,16 @@ else
 fi
 { $as_echo "$as_me:${as_lineno-$LINENO}: result: $ac_file" >&5
 $as_echo "$ac_file" >&6; }
-#if test -z "$ac_file"; then :
-#  $as_echo "$as_me: failed program was:" >&5
-#sed 's/^/| /' conftest.$ac_ext >&5
+if test -z "$ac_file"; then :
+  $as_echo "$as_me: failed program was:" >&5
+sed 's/^/| /' conftest.$ac_ext >&5
 
-# { { $as_echo "$as_me:${as_lineno-$LINENO}: error: in \`$ac_pwd':" >&5
-#$as_echo "$as_me: error: in \`$ac_pwd':" >&2;}
-# { as_fn_set_status 77
-#as_fn_error "C compiler cannot create executables
-#See \`config.log' for more details." "$LINENO" 5; }; }
-#fi
+{ { $as_echo "$as_me:${as_lineno-$LINENO}: error: in \`$ac_pwd':" >&5
+$as_echo "$as_me: error: in \`$ac_pwd':" >&2;}
+{ as_fn_set_status 77
+as_fn_error "C compiler cannot create executables
+See \`config.log' for more details." "$LINENO" 5; }; }
+fi
 ac_exeext=$ac_cv_exeext
 
 # Check that the compiler produces executables we can run.  If not, either
